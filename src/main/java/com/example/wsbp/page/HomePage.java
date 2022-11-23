@@ -14,6 +14,14 @@ public class HomePage extends WebPage {
         var youModel = Model.of("Wicket-Spring-Boot");
         var youLabel = new Label("you", youModel);
         add(youLabel);
+
+        var gakusekiModel = Model.of("b2201980");
+        var gakusekiLabel = new Label("gakuseki", gakusekiModel);
+        add(gakusekiLabel);
+
+        var nameModel = Model.of("hirakawa_keisuke");
+        var nameLabel = new Label("name", nameModel);
+        add(nameLabel);
     }
 
 }
