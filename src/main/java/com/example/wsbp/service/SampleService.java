@@ -18,7 +18,7 @@ public class SampleService implements ISampleService {
     }
 
     @Override
-    public int makeRandInt(){
+    public int makeRandInt() {
         var rand = new Random();
         var n = rand.nextInt(10);
         return n;
