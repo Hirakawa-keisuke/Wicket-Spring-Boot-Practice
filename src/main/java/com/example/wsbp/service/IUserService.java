@@ -6,4 +6,6 @@ public interface IUserService {
 
     public void removeUser(String userName, String userPass);
 
+    public boolean existsUser(String userName, String userPass);
+
 }
