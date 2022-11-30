@@ -19,7 +19,7 @@ public class UserMakerPage extends WebPage {
         var toHomePageLink = new BookmarkablePageLink<>("toHome", HomePage.class);
         add(toHomePageLink);
 
-        var userInfoForm = new Form<>("userInfo"){
+        Form<Void> userInfoForm = new Form<Void>("userInfo") {
             @Override
             protected void onSubmit() {
                 var userName = userNameModel.getObject();
@@ -29,6 +29,8 @@ public class UserMakerPage extends WebPage {
                         + ","
                         + userPass;
                 System.out.println(msg);
+                // この1行を追加
+                setResponsePage(new UserMakerCompPage(userNameModel));
             }
         };
         add(userInfoForm);
